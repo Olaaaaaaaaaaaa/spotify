@@ -22,7 +22,7 @@ class Music
 
     #[ORM\ManyToOne]
     #[ORM\JoinColumn(nullable: false)]
-    private ?Artist $artists = null;
+    private ?Artist $artist = null;
 
     public function getId(): ?int
     {
@@ -53,14 +53,14 @@ class Music
         return $this;
     }
 
-    public function getArtists(): ?Artist
+    public function getArtist(): ?Artist
     {
-        return $this->artists;
+        return $this->artist;
     }
 
-    public function setArtists(?Artist $artists): static
+    public function setArtist(?Artist $artist): static
     {
-        $this->artists = $artists;
+        $this->artist = $artist;
 
         return $this;
     }
